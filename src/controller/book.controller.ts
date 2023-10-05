@@ -36,8 +36,6 @@ export async function getAllBooksHandler(_: any, res: Response) {
 
 export async function updateBookHandler(req: Request<{id: string}, {}, Partial<CreateBookInput>>, res: Response) {
 
-    console.log("req", req.params)
-
     try {
 
         return res.send(await updateOneBook(req.params.id, req.body));
