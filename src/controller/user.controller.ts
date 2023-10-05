@@ -19,3 +19,7 @@ export async function createUserHandler(req: Request<{}, {}, CreateUserInput>,re
     }
     
 }
+
+export  async function getCurrentUserHandler(req: Request,res: Response) {
+    return res.send(res.locals.user)
+}

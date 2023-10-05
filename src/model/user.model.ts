@@ -2,6 +2,11 @@ import { DocumentType, Severity, getModelForClass, modelOptions, pre, prop } fro
 import argon2 from "argon2";
 import log from "../utils/logger";
 
+export const privateFields = [
+    "password",
+    "__v"
+]
+
 
 
 @pre<User>('save', async function () {
