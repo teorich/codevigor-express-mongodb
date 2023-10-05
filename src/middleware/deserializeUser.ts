@@ -14,8 +14,6 @@ const deserializeUser = async(req: Request, res: Response, next: NextFunction) =
 
     if(decoded) {
         res.locals.user = decoded;
-
-        console.log("decoded", decoded)
     }
 
     return next();
